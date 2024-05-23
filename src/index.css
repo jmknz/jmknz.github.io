@@ -51,7 +51,6 @@
   }
 
   body {
-    background-color: var(--color-background);
     font-family: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
       source-sans-pro, sans-serif;
   }
@@ -61,7 +60,7 @@
   }
 
   :focus-visible {
-    outline: 0.25rem solid var(--color-outline);
+    outline: 0.25rem solid;
     outline-offset: 0.25rem;
   }
 
@@ -83,7 +82,6 @@
 
 @layer components {
   [href="#main"] {
-    background-color: var(--color-background);
     display: block;
     margin: 1rem;
     padding: 1rem 1.25rem;

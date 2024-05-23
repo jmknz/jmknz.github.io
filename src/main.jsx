@@ -3,6 +3,12 @@ import ReactDOM from "react-dom/client";
 import { HelmetProvider } from "react-helmet-async";
 import { createHashRouter, RouterProvider, Outlet } from "react-router-dom";
 
+import { Home } from "./pages/Home";
+import { About } from "./pages/About";
+import { Contact, action } from "./pages/Contact";
+import { Blog } from "./pages/Blog";
+import { BlogPost } from "./pages/BlogPost";
+
 import "./index.css";
 
 const router = createHashRouter([
@@ -13,23 +19,24 @@ const router = createHashRouter([
     children: [
       {
         index: true,
-        element: <h2>Welcome to My Site</h2>,
+        element: <Home />,
       },
       {
         path: "about",
-        element: <h2>About Me</h2>,
+        element: <About />,
       },
       {
         path: "blog",
-        element: <h2>Blog</h2>,
+        element: <Blog />,
       },
       {
         path: "blog/:slug",
-        element: <h2>Blog Post</h2>,
+        element: <BlogPost />,
       },
       {
         path: "contact",
-        element: <h2>Contact Me</h2>,
+        element: <Contact />,
+        action,
       },
     ],
   },
